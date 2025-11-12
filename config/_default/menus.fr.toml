@@ -1,0 +1,134 @@
+# -- Main Menu --
+# The main menu is displayed in the header at the top of the page.
+# Acceptable parameters are name, pageRef, page, url, title, weight.
+# 
+# The simplest menu configuration is to provide:
+#   name = The name to be displayed for this menu link
+#   pageRef = The identifier of the page or section to link to
+#
+# By default the menu is ordered alphabetically. This can be
+# overridden by providing a weight value. The menu will then be
+# ordered by weight from lowest to highest.
+
+[[main]]
+  name = "Markdown / Obsidian"
+  pageRef = "markdown"
+  weight = 4
+
+[[main]]
+  name = "Tutoriels"
+  pageRef = "tuto"
+  weight = 10
+
+  [[main]]
+  name = "Modules"
+  pageRef = "modules"
+  weight = 5
+
+[[main]]
+  name = "Modules de bases"
+  parent = "Modules"
+  pageRef = "bases"
+  weight = 5
+
+[[main]]
+  name = "Afficher les notes créées / modifiées du jour"
+  parent = "Tutoriels"
+  pageRef = "notes"
+  weight = 20
+
+[[main]]
+  name = "Annoter des PDF"
+  parent = "Tutoriels"
+  pageRef = "pdf"
+  weight = 20
+
+[[main]]
+  name = "Capturer des pages web"
+  parent = "Tutoriels"
+  pageRef = "capture"
+  weight = 20
+
+[[main]]
+  name = "Créer des modèles"
+  parent = "Tutoriels"
+  pageRef = "modeles"
+  weight = 20
+
+[[main]]
+  name = "Exporter ses notes"
+  parent = "Tutoriels"
+  pageRef = "export"
+  weight = 20
+
+[[main]]
+  name = "Modules complémentaires"
+  parent = "Modules"
+  pageRef = "plugins"
+  weight = 10
+
+[[main]]
+  name = "Personnaliser l'apparence"
+  parent = "Tutoriels"
+  pageRef = "apparence"
+  weight = 20
+
+[[main]]
+  name = "Aide-mémoire"
+  pageRef = "cheat"
+  weight = 20
+
+
+[[main]]
+  name = "Ressources"
+  pageRef = "ressources"
+   weight = 20
+
+#[[main]]
+#  name = "example sub-menu 1"
+#  parent = "Parent"
+#  pageRef = "posts"
+#  weight = 20
+
+#[[main]]
+#  name = "example sub-menu 2"
+#  parent = "Parent"
+#  pageRef = "posts"
+#  weight = 20
+
+# [[subnavigation]]
+#  name = "An interesting topic"
+#  pageRef = "tags/interesting-topic"
+#  weight = 10
+
+#[[subnavigation]]
+#  name = "My Awesome Category"
+#  pre = "github"
+#  pageRef = "categories/awesome"
+#  weight = 20
+
+#[[main]]
+#  name = "Categories"
+#  pageRef = "categories"
+#  weight = 20
+
+#[[main]]
+#  name = "Tags"
+#  pageRef = "tags"
+#  weight = 30
+
+
+# -- Footer Menu --
+# The footer menu is displayed at the bottom of the page, just before
+# the copyright notice. Configure as per the main menu above.
+
+
+# [[footer]]
+#   name = "Tags"
+#   pageRef = "tags"
+#   weight = 10
+
+# [[footer]]
+#   name = "Categories"
+#   pageRef = "categories"
+#   weight = 20
