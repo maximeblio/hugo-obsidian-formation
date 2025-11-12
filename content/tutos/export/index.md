@@ -28,7 +28,7 @@ Il est possible, pour l'export vers Word, **d'utiliser un modèle pour que le do
 
 Vous trouverez ici un modèle que vous pouvez dupliquer selon vos besoins ; il reprend la police utilisée à l'UT2J (`Century Gothic`), ainsi que le logo de l'université dans l'en-tête ainsi qu'un pied de page à personnaliser.
 
-{{< button href="/download/reference.docx" target="_blank" download="reference.docx" >}}
+{{< button href="/download/reference-v2.docx" target="_blank" download="reference-v2.docx" >}}
 {{< icon "download" >}} Télécharger le template
 {{< /button >}}<br>
 
