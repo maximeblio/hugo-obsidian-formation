@@ -47,7 +47,7 @@ En préambule, **vous devez nommer correctement vos métadonnées** pour que cer
 
 - `title` = le titre du document exporté
 - `author` = l'auteur, généralement vous
-- `date` = la date à laquelle a eu une réunion par exemple
+- `date` = la date à laquelle a eu lieu une réunion par exemple
 
 {{< alert cardColor="#e63946" iconColor="#1d3557" textColor="#f1faee" >}}
 Veillez à bien écrire ces métadonnées en **anglais**. Pandoc n'intégrera pas ces éléments s'il ne reconnaît pas ces champs précis.
