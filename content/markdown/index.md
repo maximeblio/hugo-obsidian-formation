@@ -89,10 +89,6 @@ Cet appel peut-être utiliser pour insérer des images présentes dans votre cof
 
 <img src="/img/lien_5.gif">
 
-{{< alert icon="fire" cardColor="#e63946" iconColor="#1d3557" textColor="#f1faee" >}}
-**Attention !** En cas d'export vers un fichier Word, Pandoc ne pourra pas établir de lien avec les autres notes (tout simplement parce qu'il ne sait pas le faire !). Les crochets `[[` `]]` apparaîtront dans votre document convertit. Il faudra penser à effectuer un " chercher-remplacer" dans Word et de remplacer les crochets par un caractère vide.
-{{< /alert >}}
-
 ## Raccourcis et aide-mémoire
 
 |Markdown|Rendu|

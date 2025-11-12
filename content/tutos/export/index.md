@@ -28,8 +28,8 @@ Il est possible, pour l'export vers Word, **d'utiliser un modèle pour que le do
 
 Vous trouverez ici un modèle que vous pouvez dupliquer selon vos besoins ; il reprend la police utilisée à l'UT2J (`Century Gothic`), ainsi que le logo de l'université dans l'en-tête ainsi qu'un pied de page à personnaliser.
 
-{{< button icon="download" href="/download/reference.docx" target="_blank" download="reference.docx" >}}
-Télécharger le template
+{{< button href="/download/reference.docx" target="_blank" download="reference.docx" >}}
+{{< icon "download" >}} Télécharger le template
 {{< /button >}}<br>
 
 
@@ -39,7 +39,7 @@ Vous pouvez modifier ce modèle, mais la modification des paramètres de mise en
 
 ### Les bonnes pratiques pour un export réussi
 
-Quelques paramétrages sont nécessaires pour que vos exports aboutissent. Une fois tout ceci en place, l'export devrait fonctionner sans problème. 
+Quelques paramétrages sont nécessaires pour que vos exports aboutissent. C'est un peu technique, mais une fois tout ceci en place, l'export devrait fonctionner sans problème. 
 
 #### Bien renseigner ses métadonnées
 
@@ -57,16 +57,33 @@ Veillez à bien écrire ces métadonnées en **anglais**. Pandoc n'intégrera pa
 
 Pour que Pandoc trouve le modèle, il convient de le placer dans un dossier dédié. Dans la barre de recherche de l'explorateur Windows, saisissez `%appdata%`. Cherchez et ouvrez le dossier `pandoc`. Si le dossier est vide, créez un dossier `templates`, et collez-y votre modèle `.docx`.
 
+<img src="/img/pandoc_2.gif">
+
+#### Télécharger et placer votre filtre Lua
+
+Même si l'affichage des dates de vos métadonnées est en format français (`JJ-MM-AAAA`), Pandoc les exporte par défaut au format anglo-saxon (`YYYY-MM-DD`) ; pour une cohérence linguistique et un aspect visuel plus littéraire, nous allons appliquer un `filtre Lua` pour que la date soit convertie en `JJ-mois-AAAA`
+
+Tout d'abord, télécharger le filtre :
+
+{{< button href="/download/french_date_filter.lua" target="_blank" download="french_date_filter.lua" >}}
+{{< icon "download" >}} Filtre Lua
+{{< /button >}}<br>
+
+Revenez dans votre dossier Pandoc, créez un dossier intitulé `Lua` et coller le fichier que vous venez de télécharger.
+
 #### Indiquer à Pandoc où trouver votre modèle
 
-Nous devons maintenant indiquer à Pandoc quel
+Nous devons maintenant indiquer au plugin Pandoc quelques indications : copiez le code ci-dessous **en remplaçant les emplacements en majuscules**, puis coller le contenu :
 
 ```
---reference-doc=C:/Users/votre.nom/AppData/Roaming/pandoc/templates/reference.docx --resource-path="C:/Users/votre.nom/le.chemin.de.votre.coffre" --standalone
+--reference-doc=C:/Users/VOTRE.NOM/AppData/Roaming/pandoc/templates/reference.docx --resource-path="C:/Users/VOTRE.NOM/LE.CHEMIN.DE.VOTRE.COFFRE" --standalone --lua-filter=C:/Users/VOTRE.NOM/AppData/Roaming/pandoc/lua/french_date_filter.lua
 ```
-- La commande `reference-doc`, comme son nom l'indique, **va pointer vers le document de référence** dans lequel Pandoc doit compiler votre note
-- La commande `ressource path` **va chercher les médias liés à votre note**. Par exemple, si vous intégrez une image dans votre note, c'est cette commande qui ira chercher votre image et l'incorporera dans votre `.docx`
-- La commande `standalone` **va venir implanter vos métadonnées dans votre document Word**.
+<img src="/img/pandoc_1.gif">
+
+- la commande `reference-doc`, comme son nom l'indique, **va pointer vers le document de référence** dans lequel Pandoc doit compiler votre note
+- la commande `ressource path` **va chercher les médias liés à votre note**. Par exemple, si vous intégrez une image dans votre note, c'est cette commande qui ira chercher votre image et l'incorporera dans votre `.docx`
+- la commande `standalone` **va venir implanter vos métadonnées dans votre document Word**.
+- la commmande `lua-filter` va **appliquer le filtre pour que la date soit formatée au format francophone**.
 
 {{< alert icon="lightbulb" >}}
 **Astuce :** Veillez à rester simple dans la dénomination des dossiers de votre coffre. Évitez les espaces et les parenthèses pour éviter tout problème !.
@@ -76,7 +93,13 @@ Nous devons maintenant indiquer à Pandoc quel
 
 Par défault, le plugin de Pandoc va exporter votre `.docx` dans le dossier où se trouve votre note. Si vous souhaitez modifier le chemin d'export, il suffit de le renseigner dans les paramètres du plugin :
 
+![Pandoc](img/pandoc_3.png)
+
 #### Lancer votre export
 
 Depuis la palette de commande `Ctrl + P`, chercher `Pandoc Word` et cliquer sur la ligne. **Votre document Word se trouvera dans le fichier cible, ou à défaut dans le dossier original de votre note Obsidian.**
+
+{{< alert icon="fire" cardColor="#e63946" iconColor="#1d3557" textColor="#f1faee" >}}
+**Attention !** En cas d'export vers un fichier Word, Pandoc ne pourra pas établir de lien avec les autres notes (tout simplement parce qu'il ne sait pas le faire !). Les crochets `[[` `]]` apparaîtront dans votre document convertit. Il faudra penser à effectuer un " chercher-remplacer" dans Word et de remplacer les crochets par un caractère vide.
+{{< /alert >}}
 

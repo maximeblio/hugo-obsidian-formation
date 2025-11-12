@@ -14,13 +14,13 @@ Voici une sélection de plugins présentés durant la formation, ou qui pourraie
 
 <img src="/img/plugin_1.gif">
 
-## Calendar
+## [Calendar](https://github.com/liamcain/obsidian-calendar-plugin)
 
 **Calendar** est un **calendrier minismaliste**. Il permet d'afficher le mois en cours. Deux informations sont présentes : une **pastille bleue** indique qu'**une note journalière a été créée** ; une **pastille blanche** indique que **des notes ont été crées ce jour là**. Pour créer une note journalière, il suffit de cliquer sur une date dans le calendrier.
 
 ![Calendar](/img/calendar.png)
 
-Je vous renvoie ici pour paramétrer vos notes journalières, et là pour y afficher la liste des notes créées et modifiées à une date X.
+Je vous renvoie [ici](/bases/index.md#note-quotidienne) pour paramétrer vos notes journalières, et [là](tutos/notes/index.md) pour y afficher la liste des notes créées et modifiées à une date X.
 
 ## [Day Planner](https://github.com/ivan-lednev/obsidian-day-planner)
 
@@ -32,10 +32,14 @@ Day Planner est un calendrier éditable et qui permet une gestion par blocs de t
 
 La maîtrise des balises Markdown permet une rédaction fluide, permettant de se concentrer sur le texte et sa structuration sémantique, et non sur l'apparence que l'on souhaite donner au document, comme c'est le cas avec les outils de traitement de texte classique. Toutefois, retrouver une **barre d'outil similaire à celle de Word / Libre Office** peut-être parfois pratique. Editing Toolbar permet de retrouver une interface graphique pour insérer des listes, des titres, des liens, des tableaux ...
 
-## Pandoc
+## [Pandoc Plugin](https://github.com/OliverBalfour/obsidian-pandoc)
 
 Pandoc est un véritable **couteau-suisse de convertion de document numérique**. Une présentation détaillée, notamment sur l'export en format Word, est disponible sur [cette page](/tutos/export/#solution-n2--pandoc-le-couteau-suisse).
 
-## SmartTypography
+{{< alert cardColor="#e63946" iconColor="#1d3557" textColor="#f1faee" >}}
+**Attention !** L'installation du plugin sur Obsidian doit s'accompagner de celle du logiciel [Pandoc](https://pandoc.org/) sur votre ordinateur.
+{{< /alert >}}
+
+## [SmartTypography](https://github.com/mgmeyers/obsidian-smart-typography)
 
 Outil important pour remplacer les guillemets anglophones `"` par `« »`.
