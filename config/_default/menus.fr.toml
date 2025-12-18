@@ -61,6 +61,13 @@
   pageRef = "export"
   weight = 20
 
+
+[[main]]
+  name = "Lier des documents externes (Word, Excel...)"
+  parent = "Tutoriels"
+  pageRef = "liens-externes"
+  weight = 20
+
 [[main]]
   name = "Modules complémentaires"
   parent = "Modules"

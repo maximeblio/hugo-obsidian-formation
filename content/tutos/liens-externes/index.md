@@ -7,7 +7,7 @@ Hormis les PDF et les images, **Obsidian n’est pas capable d’afficher des do
 
 Pour ce faire, **il suffit d’effectuer un glisser-déposer de votre fichier en maintenant la touche `Ctrl` enfoncée vers la note courante**. Un lien cliquable va s’afficher ; le fichier s’ouvrira avec le bon logiciel si vous cliquez dessus depuis Obsidian.
 
-<img src="img/liensexternes.gif">
+<img src="/img/liensexternes.gif">
 
 {{< alert cardColor="#e63946" iconColor="#1d3557" textColor="#f1faee" >}}
 **Attention !** Si vous n’utilisez pas la touche `Ctrl` enfoncée, le fichier sera copié dans votre coffre ouvert
