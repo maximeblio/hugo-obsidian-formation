@@ -28,7 +28,7 @@ Il est possible, pour l'export vers Word, **d'utiliser un modèle pour que le do
 
 Vous trouverez ici un modèle que vous pouvez dupliquer selon vos besoins ; il reprend la police utilisée à l'UT2J (`Century Gothic`), ainsi que le logo de l'université dans l'en-tête ainsi qu'un pied de page à personnaliser.
 
-{{< button href="/download/reference-v2.docx" target="_blank" download="reference.docx" >}}
+{{< button href="/download/reference.docx" target="_blank" download="reference.docx" >}}
 {{< icon "download" >}} Télécharger le template
 {{< /button >}}<br>
 
@@ -93,7 +93,7 @@ Par défaut, le plugin de Pandoc va exporter votre `.docx` dans le dossier où s
 
 Depuis la palette de commande `Ctrl + P`, recherchez `Enhancing Export : Export to` et cliquez sur la ligne. Une fenêtre va s'afficher : cliquez sur `Export` après vous être assuré que le type d'export corresponde au format `.docx`. **Votre document Word se trouvera dans le fichier cible, ou à défaut dans le dossier original de votre note Obsidian.**
 
-![Pandoc](img/pandoc_4.png)
+<img src="/img/pandoc_4.gif">
 
 {{< alert icon="fire" cardColor="#e63946" iconColor="#1d3557" textColor="#f1faee" >}}
 **Attention !** En cas d'export vers un fichier Word, Pandoc ne pourra pas établir de lien avec les autres notes (tout simplement parce qu'il ne sait pas le faire !). Les crochets `[[` `]]` apparaîtront dans votre document convertit. Il faudra penser à effectuer un "chercher-remplacer" dans Word et de remplacer les crochets par un caractère vide.
