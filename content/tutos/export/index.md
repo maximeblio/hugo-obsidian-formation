@@ -15,10 +15,10 @@ Nativement, Obsidian propose l'export d'une note sous format PDF. Dans le menu d
 Pandoc est un logiciel libre de conversion de documents numériques. Un plugin peut être installé pour assurer des exports en format PDF (via `LaTeX`), Word, HTML, PowerPoint et bien d'autres.
 
 {{< alert cardColor="#e63946" iconColor="#1d3557" textColor="#f1faee" >}}
-**Attention !** L'installation du plugin sur Obsidian doit s'accompagner de celle du logiciel [Pandoc](https://pandoc.org/) sur votre ordinateur.
+**Attention !** Au préalable, vous devez installer le logiciel [Pandoc](https://pandoc.org/) sur votre ordinateur.
 {{< /alert >}}
 
-Une fois le logiciel et le plugin instalés, ouvrez la palette de commande (`Ctrl + P`), et recherchez Pandoc. La liste des exports possibles va s'afficher.
+Une fois le logiciel installé, vous devez chercher et installer dans les modules complémentaires d'Obsidian `Enhancing Export`. Lancez la palette de commande (`Ctrl + P`), cherchez `Enhancing Export : Export to` ; une fenêtre va s'ouvrir, vous proposant différents formats d'exportation.
 
 ### Word : utiliser un modèle pour l'export
 
@@ -76,18 +76,12 @@ Revenez dans votre dossier Pandoc, créez un dossier intitulé `lua` et coller l
 Nous devons maintenant indiquer au plugin Pandoc quelques indications : copiez le code ci-dessous **en remplaçant les emplacements en majuscules**, puis collez le contenu :
 
 ```
---reference-doc=C:/Users/VOTRE.NOM/AppData/Roaming/pandoc/templates/reference.docx --resource-path="C:/Users/VOTRE.NOM/LE.CHEMIN.DE.VOTRE.COFFRE" --standalone --lua-filter=C:/Users/VOTRE.NOM/AppData/Roaming/pandoc/lua/french_date_filter.lua
+--reference-doc="C:/Users/VOTRE.NOM/AppData/Roaming/pandoc/templates/reference.docx" --lua-filter="C:/Users/VOTRE.NOM/AppData/Roaming/pandoc/lua/french_date_filter.lua"
 ```
 <img src="/img/pandoc_1.gif">
 
 - la commande `reference-doc`, comme son nom l'indique, **va pointer vers le document de référence** dans lequel Pandoc doit compiler votre note
-- la commande `resource path` **va chercher les médias liés à votre note**. Par exemple, si vous intégrez une image dans votre note, c'est cette comande qui ira chercher votre image et l'incorporera dans votre `.docx`
-- la commande `standalone` **va venir implanter vos métadonnées dans votre document Word**.
 - la commmande `lua-filter` va **appliquer le filtre pour que la date soit formatée au format francophone**.
-
-{{< alert icon="lightbulb" >}}
-**Astuce :** Veillez à rester simple dans la dénomination des dossiers de votre coffre. Évitez les espaces et les parenthèses pour éviter tout problème !.
-{{< /alert >}}
 
 #### Sélectionner un dossier d'export
 
