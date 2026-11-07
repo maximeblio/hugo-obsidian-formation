@@ -78,7 +78,7 @@
   name = "Personnaliser l'apparence"
   parent = "Tutoriels"
   pageRef = "apparence"
-  weight = 
+  weight = 20
   
 [[main]]
   name = "Quelques conseils pour organiser ses notes"
