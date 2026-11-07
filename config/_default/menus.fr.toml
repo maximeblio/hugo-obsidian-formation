@@ -83,7 +83,7 @@
 [[main]]
   name = "Quelques conseils pour organiser ses notes"
   parent = "Tutoriels"
-  pageRef = "organiser"
+  pageRef = "organisation"
   weight = 20
 
 [[main]]
