@@ -1,3 +1,7 @@
+---
+title: "Quelques conseils pour organiser ses notes"
+---
+
 Vous verrez vite que votre coffre va grossir, grossir, grossir (!) pour atteindre rapidement plusieurs centaines de notes, surtout si vous l’utilisez tous les jours.
 
 Pour vous y retrouver, voici quelques conseils afin de ne pas perdre les informations contenues dans vos notes.
