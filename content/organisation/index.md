@@ -18,8 +18,14 @@ Au début, il est facile de se souvenir des notes présentes dans son coffre. Ma
 
 ![Gestion des notes](/img/orga_3.png)
 
+![Gestion des notes](/img/orga_4.png)
+
 Le plus simple est finalement d’intégrer à ses notes une propriété qui pourrait s’appeler `Index` ou `En lien`, dans laquelle on établit un lien vers l’index adéquat. On peut d’ailleurs pointer vers plusieurs index si on le souhaite.
 
-On peut ainsi considérer que les liens dans le corps de la note sont des liens « **horizontaux** », et que les liens vers les index, dans les propriétés, sont des liens « **verticaux** » qui structurent votre connaissance dans Obsidian.
+On peut ainsi considérer que les liens dans le corps de la note sont des liens « **horizontaux** », et que les liens vers les index, dans les propriétés, sont des liens « **verticaux** » qui structurent votre connaissance dans Obsidian. Ce logiciel permet en effet de vous **affranchir du choix de ranger vos notes dans un dossier spécifique**, comme c'est le cas sur votre disque dur par exemple, lorsque vous devez enregistrer un fichier PDF. **Une structure simple de dossiers suffit pour vous y retrouver**. Voici, à titre d'exemple, une proposition d'architecture pour un.e doctorant.e :
+
+![Gestion des notes](/img/orga_5.png)
 
 Vous pouvez aussi imaginer une note qui serait l’index de vos index : une sorte de page d’accueil listant tous les index existant dans votre coffre.
+
+De plus, **vous pouvez prévoir une revue semestrielle ou annuelle de votre coffre**, pour archiver (dans un dossier `Archives` par exemple) ou les supprimer définitivement.
