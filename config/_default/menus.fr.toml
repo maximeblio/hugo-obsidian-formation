@@ -87,6 +87,12 @@
   weight = 20
 
 [[main]]
+  name = "Intégrer Zotero avec Zotlit"
+  parent = "Tutoriels"
+  pageRef = "zotero"
+  weight = 20
+
+[[main]]
   name = "Aide-mémoire"
   pageRef = "cheat"
   weight = 20
