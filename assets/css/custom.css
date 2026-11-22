@@ -1,0 +1,17 @@
+/* Encadrés (shortcode alert) : empêcher les blocs de code de déborder */
+.prose div.flex.rounded-md > span:last-child {
+  min-width: 0;
+  flex: 1 1 0%;
+}
+
+.prose div.flex.rounded-md .highlight-wrapper,
+.prose div.flex.rounded-md .highlight,
+.prose div.flex.rounded-md pre {
+  max-width: 100%;
+}
+
+.prose div.flex.rounded-md pre,
+.prose div.flex.rounded-md pre code {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
