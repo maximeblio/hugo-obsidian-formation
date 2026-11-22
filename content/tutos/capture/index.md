@@ -20,3 +20,7 @@ Si une page web vous intéresse, cliquez sur l’icône du module. Des champs de
 Dans les paramètres du module, vous pouvez enregistrer des modèles (ajouter ou supprimer des métadonnées par exemple), gérer le comportement de la note générée, etc.
 
 <img src="/img/capture_2.gif">
+
+### Modèles
+
+Vous pouvez trouver s[ur cette page web](https://github.com/kepano/clipper-templates) un exemple de modèles qui servent de déclencheur à votre Web Clipper. Par exemple, si vous utilisez le modèle Wikipedia, le Web Clipper va automatiquement, en détectant votre navigation, utiliser un déclencheur et vous proposer des métadonnées paramétrés pour enregistrer des pages de l'encylopédie en ligne.
