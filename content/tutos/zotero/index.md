@@ -6,6 +6,9 @@ title: "Intégrer Zotero avec Zotlit"
 **ATTENTION : cette page est encore en construction !**
 {{< /alert >}}
 
+> [!note] Test
+> ceci est un test
+
 
 {{< alert icon="lightbulb" >}}
 **Prérequis :** Obsidian 1.13.4 et plus (retélécharger l’installateur si besoin) avec Zotero 9 et plus, version de bureau uniquement
