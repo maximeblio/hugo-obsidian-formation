@@ -1,0 +1,42 @@
+/* Schéma de couleurs inspiré de Flexoki (Steph Ango, licence MIT) - "papier" */
+:root {
+  /* Neutres : papier chaud */
+  --color-neutral: 255, 252, 240;
+  --color-neutral-50: 242, 240, 229;
+  --color-neutral-100: 230, 228, 217;
+  --color-neutral-200: 206, 205, 195;
+  --color-neutral-300: 183, 181, 172;
+  --color-neutral-400: 159, 157, 150;
+  --color-neutral-500: 135, 133, 128;
+  --color-neutral-600: 111, 110, 105;
+  --color-neutral-700: 52, 51, 49;
+  --color-neutral-800: 28, 27, 26;
+  --color-neutral-900: 16, 15, 15;
+  --color-neutral-950: 16, 15, 15;
+
+  /* Principale : bleu */
+  --color-primary-50: 235, 243, 249;
+  --color-primary-100: 213, 228, 241;
+  --color-primary-200: 188, 216, 234;
+  --color-primary-300: 146, 191, 219;
+  --color-primary-400: 67, 133, 190;
+  --color-primary-500: 49, 113, 178;
+  --color-primary-600: 32, 94, 166;
+  --color-primary-700: 26, 79, 140;
+  --color-primary-800: 22, 59, 102;
+  --color-primary-900: 18, 38, 66;
+  --color-primary-950: 16, 31, 52;
+
+  /* Secondaire : orange */
+  --color-secondary-50: 255, 240, 229;
+  --color-secondary-100: 255, 222, 196;
+  --color-secondary-200: 249, 174, 119;
+  --color-secondary-300: 236, 139, 73;
+  --color-secondary-400: 218, 112, 44;
+  --color-secondary-500: 203, 97, 32;
+  --color-secondary-600: 188, 82, 21;
+  --color-secondary-700: 157, 67, 16;
+  --color-secondary-800: 126, 53, 16;
+  --color-secondary-900: 83, 42, 20;
+  --color-secondary-950: 58, 31, 18;
+}
