@@ -2,6 +2,25 @@
 title: "Intégrer Zotero avec Zotlit"
 ---
 
+{{< alert icon="fire" cardColor="#e63946" iconColor="#1d3557" textColor="#f1faee" >}}
+**ATTENTION : cette page est encore en construction !**
+{{< /alert >}}
+
+
+{{< alert icon="lightbulb" >}}
+**Prérequis :** Obsidian 1.13.4 et plus (retélécharger l’installateur si besoin) avec Zotero 9 et plus, version de bureau uniquement
+{{< /alert >}}
+
+
+{{< alert icon="fire" cardColor="#e63946" iconColor="#1d3557" textColor="#f1faee" >}}
+**Attention !** Si vous chercher de la documentation sur le web, **le module Zotlit a connu une grande évolution entre la version 1 et la version 2**. Vérifiez bien, notamment pour les tutoriels les plus anciens, de quelle version il est question.
+{{< /alert >}}
+
+
+{{< alert icon="lightbulb" >}}
+**Documentation :** pour explorer davantage les fonctionnalités de Zotlit, vous pouvez retrouver [la documentation en ligne](https://zotlit.aidenlx.site/) (en langue anglaise uniquement)
+{{< /alert >}}
+
 Les avantages de lier Obsidian et Zotero sont nombreux, pour n’en citer que quelques uns :
 
 - **création de note de lecture pour chaque document présent dans Zotero**
@@ -40,7 +59,16 @@ Une fois le module complémentaire installé, un onglet va s’ouvrir dans Obsid
 
 ### Paramétrage de base
 
-Avant tout chose, il convient de faire quelques paramétrages de base dans cette nouvelle extension :
+Avant tout chose, il convient de faire quelques paramétrages de base dans cette nouvelle extension. Zotlit va en effet créer plusieurs fichiers en lien avec des modèles, et va notamment attendre le pointage vers le dossier qui va accueillir toutes les notes de lecture :
+
+1. Dans les paramètres du module, indiquez vers quel dossier vos notes de lecture se créés. Ici, nous utiliserons sobrement un dossier `Notes de lecture`
+
+
+
+2. Si vous souhaitez importer des notes prises dans le logiciel Zotero lui-même, là aussi, vous devez indiquer où ces fichiers seront créés. Ici, nous utiliserons un sous dossier dans « Notes de lecture » : `Notes de lecture/Notes Zotero`
+
+
+3. Enfin, Zotlit va probablement générer des fichiers markdown pour gérer des modèles. Je vous conseille de les centraliser dans le même dossier « Modèles ». Pour ce faire, allez dans `Advanced`, puis dans la section `Template engine`, modifier le chemin. Ici, nous utiliserons `Modèle/Zotlit/templates`
 
 
 
@@ -63,11 +91,24 @@ Pour explorer les métadonnées disponibles dans Zotero via Zotlit, allez dans l
 
 Une fenêtre s’ouvre. Cliquez à droite sur les accolades `{ }` ouvrant le champ `Fields`, puis sur le logo de l’épingle pour afficher les métadonnées.
 
-Zotlit vous propose des ressources génériques (articles, livres, thèses) mais également des éléments présents dans votre propre Zotero.
+Zotlit vous propose des ressources génériques (articles, livres, thèses) mais également des éléments présents dans votre propre Zotero. **Vous pouvez donc facilement sélectionner les champs utiles pour vous, et voir la prévisualisation de la future note de lecture** sur le panneau de droite en fonction de vos besoins.
 
+Par défaut, plusieurs champs sont déjà présents en langue anglaise :
+
+- **title** pour le titre
+- **related** pour les éléments du menu « Connexes » dans Zotero
+- **collections**, qui indique le nom de la Collection dans laquelle se trouve votre ressource dans Zotero
+- **citekey** pour la clef unique de citation
+
+**Vous pouvez aussi vous créer des profils d’import automatique en fonction de la nature de votre référence bibliographique.** Par exemple, il peut être intéressant d’ajouter l’ISBN pour un ouvrage, ou le nom de la revue dans laquelle est publié un article.
+
+Pour ce faire, 
+
+
+#### Quelques astuces
 
 {{< alert icon="lightbulb" >}}
-Lors de la création d’une note de lecture, si vous souhaitez que les auteurs et les autrices apparaissent avec des liens dans les propriétés, vous pouvez, dans le modèle d’export, insérer ce code :
+**Nom d’auteur** : lors de la création d’une note de lecture, si vous souhaitez que **les auteurs et les autrices apparaissent avec des liens dans les propriétés**, vous pouvez, dans le modèle d’export, insérer ce code :
 
 ```
 zt.creators | where: "role", "author" | map: "fullName" | join: "]]§[[" | prepend: "[[" | append: "]]" | split: "§"
@@ -75,6 +116,22 @@ zt.creators | where: "role", "author" | map: "fullName" | join: "]]§[[" | prepe
 
 Une fois la note de lecture créée, vous pourrez directement cliquez sur le nom d’un.e auteur.e pour créer / aller sur sa fiche.
 {{< /alert >}}
+
+
+{{< alert icon="lightbulb" >}}
+Si vous modifier les propriétés de votre profil d’importation (par exemple, vous choisissez de rajouter le DOI dans vos notes de lecture), vous pouvez appliquer la modification sur v
+{{< /alert >}}
+
+
+{{< alert icon="lightbulb" >}}
+
+{{< /alert >}}
+
+## Créer vos notes de lecture
+
+Plusieurs manières de faire s’offre à vous pour créer des notes de lecture
+
+1. vous pouvez importer **l’ensemble de vos références Zotero** dans Obsidian
 
 
 ### Importer des commentaires sous forme de note de Zotero dans Obsidian (note parente)
@@ -106,8 +163,9 @@ Dans Obsidian, sur la note parente, je clique sur les trois points en haut à dr
 Le texte se met alors à jour.
 
 {{< alert icon="fire" cardColor="#e63946" iconColor="#1d3557" textColor="#f1faee" >}}
-La synchronisation des notes ne se fait que dans un sens : de Zotero vers Obsidian. Vous ne pouvez pas modifier du texte dans votre note Obsidian pour qu’elle soit ensuite mise à jour dans Zotero
+Attention ! **La synchronisation des notes ne se fait que dans un sens : de Zotero vers Obsidian.** Vous ne pouvez pas modifier du texte dans votre note Obsidian pour qu’elle soit ensuite mise à jour dans Zotero
 {{< /alert >}}
+
 
 {{< alert icon="lightbulb" >}}
 Si vous utilisez souvent les notes dans Zotero, pensez à intégrer la synchronisation dans votre *workflow* autant de fois que nécessaire
@@ -135,14 +193,14 @@ Si vous survoler la souris sur la citation soulignée, une petite fenêtre de di
 - ouvrir Zotero pour afficher la ressource bibliographique
 - ouvrir la vue Zotero dans Obsidian via le plugin Zotlit
 
-Si votre citation pointe vers une page précise d’une ressource documentaire, vous pouvez la signaler dans l’appel de citation. Pour cela revenez entre les crochet `[` et, après le dernier caractère de la clef de citation, faite `Espace` puis ajouter `p. X`, sans virgule :
+**Si votre citation pointe vers une page précise d’une ressource documentaire, vous pouvez la signaler dans l’appel de citation**. Pour cela revenez entre les crochet `[` et, après le dernier caractère de la clef de citation, faite `Espace` puis ajouter `p. X`, sans virgule :
 
 
 Au moment de l’export de votre bibliographie, quelque soit le style CSL Zotero choisit, la page apparaîtra correctement formatée.
 
 ## Exporter vos notes avec des références bibliographiques
 
-Le plugin prévoit un export simplifier de texte avec des références bibliographiques présentes en son sein. Pour ce faire, appelez la palette de commande `Ctrl + P` puis chercher `Zotlit : Export note with citations`.
+**Le plugin prévoit un export simplifier de texte avec des références bibliographiques présentes en son sein**. Pour ce faire, appelez la palette de commande `Ctrl + P` puis chercher `Zotlit : Export note with citations`.
 
 Une fenêtre de dialogue s’ouvre, dans laquelle vous allez pouvoir choisir :
 
@@ -151,14 +209,14 @@ Une fenêtre de dialogue s’ouvre, dans laquelle vous allez pouvoir choisir :
 - le dossier d’exportation (par défaut, cela sera votre coffre)
 
 {{< alert icon="fire" cardColor="#e63946" iconColor="#1d3557" textColor="#f1faee" >}}
-Attention ! Cette fonctionnalité est assez limité, elle permet simplement un export textuel. Pour un export avec des images et des ressources bibliographiques, voir cet article sur les exports avancés.
+Attention ! Cette fonctionnalité est assez limité, **elle permet simplement un export textuel.** Pour un export avec des images et des ressources bibliographiques, voir cet article sur les exports avancés.
 {{< /alert >}}
 
 ## Repérer en un clin d’œil si une référence dans Zotero dispose d’une fiche dans Obsidian
 
-### Installation d’un module
+### Installation du module MarkDB-Connect
 
-Au-préalable, vous devez installer le module pour Zotero **[MarkDB-Connect](https://github.com/daeh/zotero-markdb-connect)**. Concrètement, ce module va scanner votre dossier où se trouve vos notes de lecture pour le formaliser sur Zotero.
+Au-préalable, vous devez installer le module pour Zotero **[MarkDB-Connect](https://github.com/daeh/zotero-markdb-connect)**. **Concrètement, ce module va scanner dans votre coffre Obsidian où se trouve vos notes de lecture pour le formaliser sur Zotero.**
 
 D’un coup d’oeil, vous pourrez voir les références qui disposent d’une fiche de lecture dans votre coffre. Cela ce formalise dans cet exemple par la présence des petites balises violettes :
 
@@ -170,4 +228,4 @@ Pour installer ce module, rendez-vous sur [cette page web](https://github.com/da
 
 ### Paramétrage et utilisation du plugin
 
-Cochez la puce `Custom File Filter`, et vérifier que les valeurs indiquées dans le champ soient les suivantes : `^.+\.md$` (il faut généralement enlever uniquement le `@`)
+Dans les paramètre du module, cochez la puce `Custom File Filter`, et vérifier que les valeurs indiquées dans le champ soient les suivantes : `^.+\.md$` (il faut généralement enlever uniquement le `@`)
