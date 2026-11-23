@@ -15,3 +15,8 @@
   white-space: pre-wrap;
   overflow-wrap: anywhere;
 }
+
+/* Encadrés consécutifs : espace entre deux alertes qui se suivent */
+.prose div.flex.rounded-md + div.flex.rounded-md {
+  margin-top: 1rem;
+}
