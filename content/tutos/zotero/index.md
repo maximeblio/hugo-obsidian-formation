@@ -52,10 +52,11 @@ Avant toute chose, il convient de faire quelques paramétrages de base dans ce n
     
 2. Si vous souhaitez importer des notes prises dans Zotero lui-même, vous devez là aussi indiquer où ces fichiers seront créés. Ici, nous utiliserons un sous-dossier de « Notes de lecture » : `Notes de lecture/Notes Zotero`
 
+<img src="/img/zotero_obsidian2.gif">
+    
+3. Enfin, ZotLit va probablement générer des fichiers Markdown pour gérer les modèles. Je vous conseille de les centraliser dans votre dossier « Modèles ». Pour ce faire, allez dans `Advanced`, puis, dans la section `Template engine`, modifiez le chemin. Ici, nous utiliserons `Modèles/Zotlit/templates`
+
 <img src="/img/zotero_obsidian.gif">
-    
-1. Enfin, ZotLit va probablement générer des fichiers Markdown pour gérer les modèles. Je vous conseille de les centraliser dans votre dossier « Modèles ». Pour ce faire, allez dans `Advanced`, puis, dans la section `Template engine`, modifiez le chemin. Ici, nous utiliserons `Modèles/Zotlit/templates`
-    
 
 ### Explorer les métadonnées Zotero, créer des profils d’import
 
@@ -73,7 +74,11 @@ Il convient donc de sélectionner les métadonnées qui nous intéressent : elle
 
 Pour explorer les métadonnées disponibles dans Zotero via ZotLit, allez dans les préférences du module, puis dans `Literature note profiles`, et cliquez sur l’icône en forme de crayon dans l’encart `Default`.
 
+<img src="/img/zotero_obsidian3.gif">
+
 Une fenêtre s’ouvre. Cliquez, à droite, sur les accolades `{ }` ouvrant le champ `Fields`, puis sur l’icône d’épingle pour afficher les métadonnées.
+
+<img src="/img/zotero_obsidian4.gif">
 
 ZotLit vous propose des ressources génériques (articles, livres, thèses), mais aussi des éléments présents dans votre propre Zotero. **Vous pouvez donc facilement sélectionner les champs utiles pour vous et voir l’aperçu de la future note de lecture** dans le panneau de droite, en fonction de vos besoins.
 
@@ -89,6 +94,8 @@ Par défaut, plusieurs champs sont déjà présents, en anglais :
 Pour ce faire, dans le menu `Literature note profiles`, cliquez sur le `+` dans la section `Other profiles`, et créez autant de profils que nécessaire. Chose intéressante, il est possible de déclencher automatiquement un profil en fonction du type de la ressource dans Zotero. Par exemple, un article scientifique importera automatiquement les bonnes métadonnées en fonction du déclencheur choisi.
 
 Ainsi, pour poursuivre avec l’exemple de l’article scientifique, je vais dans le menu `Match` et j’indique le type d’item Zotero `journalArticle`. Pour chaque note de lecture créée à partir d’un article scientifique de Zotero, les champs de métadonnées présélectionnés s’appliqueront.
+
+<img src="/img/zotero_obsidian5.gif">
 
 #### Quelques astuces
 
@@ -117,11 +124,16 @@ Plusieurs manières s’offrent à vous pour créer des notes de lecture :
 1. vous pouvez importer **l’ensemble de vos références Zotero** dans Obsidian en sélectionnant, depuis la palette de commandes (`Ctrl + P`), l’entrée `Zotlit : Create or update all literature notes` ; cette fonctionnalité est intéressante, mais peut atteindre ses limites si votre bibliothèque Zotero est très fournie
     
 2. en cliquant sur l’icône de ZotLit dans le ruban à gauche, une copie de votre bibliothèque Zotero s’affiche. Vous pouvez l’explorer et créer ou ouvrir une note de lecture depuis le menu :
+
+<img src="/img/zotero_obsidian6.gif">
     
 3. une autre manière efficace consiste à appeler, depuis la palette de commandes, `Zotlit : Open literature note quick switcher` ; une fenêtre de dialogue Obsidian s’ouvre, dans laquelle vous pouvez chercher directement une référence bibliographique. En appuyant sur `Entrée`, la note de lecture est créée
+
+<img src="/img/zotero_obsidian7.gif">
     
 4. enfin, directement depuis Zotero, faites un `clic droit` sur la ressource, puis, dans `Zotlit`, cliquez sur `Create or Update Literature Note`
-    
+
+<img src="/img/zotero_obsidian8.gif">
 
 ### Importer des notes Zotero dans Obsidian (notes filles)
 
@@ -193,6 +205,8 @@ Au-delà de la création de notes de lecture dans Obsidian, **ZotLit vous permet
 
 Lors de la saisie de votre texte, lorsque vous devez faire un appel de citation, saisissez `[@` : un menu déroulant apparaît, dans lequel vous trouverez les dernières notes de lecture ouvertes. Vous pouvez aussi chercher une référence par titre ou par auteur.
 
+<img src="/img/zotero_obsidian9.gif">
+
 {{< alert icon="lightbulb" >}} **Il n’est pas obligatoire d’avoir créé une note de lecture pour faire un appel de citation.** ZotLit va chercher dans votre bibliothèque Zotero toutes les entrées bibliographiques disponibles. {{< /alert >}}
 
 Par défaut, c’est le style CSL **Chicago (auteur-date)** qui met en forme la citation dans le corps du texte. Vous pouvez modifier le style CSL dans les paramètres de ZotLit. Lorsque vous sortez de la sélection, la citation se met en forme sous la forme d’un appel de citation dans le texte.
@@ -204,6 +218,8 @@ Si vous survolez la citation soulignée avec la souris, une petite fenêtre de d
 - ouvrir la vue Zotero dans Obsidian via ZotLit
 
 **Si votre citation renvoie à une page précise d’une ressource documentaire, vous pouvez l’indiquer dans l’appel de citation.** Pour cela, placez-vous entre les crochets `[`, juste après le dernier caractère de la clé de citation, faites `Espace`, puis ajoutez `p. X`, sans virgule :
+
+<img src="/img/zotero_obsidian10.gif">
 
 Au moment de l’export, quel que soit le style CSL Zotero choisi, la page apparaîtra correctement mise en forme.
 
