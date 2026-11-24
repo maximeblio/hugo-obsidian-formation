@@ -36,6 +36,8 @@ Une fois le module installé, un onglet s’ouvre dans Obsidian et vous indique 
 - normalement, ZotLit trouve automatiquement votre bibliothèque Zotero
     
 - vous devez indiquer le dossier dans lequel les notes de lecture seront créées et exportées dans votre coffre Obsidian. Ici, nous allons simplement créer un dossier intitulé « Notes de lecture » :
+
+<img src="/img/zotero-mono10.gif">
     
 - vous devez également installer, **dans Zotero**, le module complémentaire intitulé **ZotLit Companion**. Il permet de garder Obsidian et Zotero synchronisés : tous les changements effectués dans Zotero seront ainsi répercutés dans Obsidian.
     
@@ -49,8 +51,10 @@ Avant toute chose, il convient de faire quelques paramétrages de base dans ce n
 1. Dans les paramètres du module, indiquez le dossier dans lequel vos notes de lecture seront créées. Ici, nous utiliserons sobrement un dossier `Notes de lecture`
     
 2. Si vous souhaitez importer des notes prises dans Zotero lui-même, vous devez là aussi indiquer où ces fichiers seront créés. Ici, nous utiliserons un sous-dossier de « Notes de lecture » : `Notes de lecture/Notes Zotero`
+
+<img src="/img/zotero_obsidian.gif">
     
-3. Enfin, ZotLit va probablement générer des fichiers Markdown pour gérer les modèles. Je vous conseille de les centraliser dans votre dossier « Modèles ». Pour ce faire, allez dans `Advanced`, puis, dans la section `Template engine`, modifiez le chemin. Ici, nous utiliserons `Modèles/Zotlit/templates`
+1. Enfin, ZotLit va probablement générer des fichiers Markdown pour gérer les modèles. Je vous conseille de les centraliser dans votre dossier « Modèles ». Pour ce faire, allez dans `Advanced`, puis, dans la section `Template engine`, modifiez le chemin. Ici, nous utiliserons `Modèles/Zotlit/templates`
     
 
 ### Explorer les métadonnées Zotero, créer des profils d’import
@@ -123,11 +127,15 @@ Plusieurs manières s’offrent à vous pour créer des notes de lecture :
 
 **Zotero permet de prendre des notes directement dans le logiciel de gestion bibliographique.** Les fonctionnalités sont très limitées – cela ressemble à un simple post-it numérique – mais il peut parfois être pratique de prendre quelques notes dans Zotero.
 
+![Gestion des notes](/img/zotero.note_1.png)
+
 **Il est possible d’importer ces notes Zotero dans Obsidian** ; ces notes filles (ou **child notes** en anglais) sont gérées comme des pièces jointes de la note de lecture principale. Plusieurs moyens sont possibles pour les importer :
 
 #### Depuis Zotero
 
 Depuis Zotero, faites un clic droit sur une note fille, puis sélectionnez `Zotlit > Import Selected Note`. La note s’ouvre alors directement dans Obsidian.
+
+<img src="/img/zotero.child note.gif">
 
 #### Depuis Obsidian
 
@@ -160,6 +168,24 @@ Pour les faire apparaître, ajoutez le code suivant dans le corps de la note de 
 - {{ note.noteLink }}
 {% endfor %}
 ```
+## Importer les tags Zotero dans les propriétés
+
+Les mots-clés (« tags ») d’une référence Zotero peuvent être repris dans les propriétés de la note de lecture, sous forme de liste. Dans le profil, ajoutez une entrée avec la clé `tags`, puis saisissez dans le champ d’expression :
+
+```
+zt.tags | obsidian_tag
+```
+
+Le filtre `obsidian_tag` convertit les tags Zotero en tags valides pour Obsidian, qui n’accepte pas d’espace (`open access` devient `open_access`).
+
+{{< alert icon="lightbulb" >}}
+Pour repérer l’origine des tags, vous pouvez ajouter un préfixe : `zt.tags | obsidian_tag: "zotero/"` donne par exemple `zotero/open_access`.
+{{< /alert >}}
+
+{{< alert icon="lightbulb" >}}
+Si vous ajoutez aussi des tags à la main dans Obsidian, choisissez le mode de fusion `Append` : les tags Zotero s’ajoutent aux vôtres au lieu de les écraser, comme le ferait `Replace` à chaque mise à jour de la note.
+{{< /alert >}}
+
 
 ## Citer des références dans vos notes
 
